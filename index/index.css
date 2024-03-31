@@ -1,0 +1,101 @@
+html{
+    height: 100%;
+}
+
+.textoModoClaro{
+    color: rgb(29, 29, 29);
+}
+
+.fundoModoEscuro{
+    background-image: linear-gradient(rgb(65, 69, 78),rgb(26, 26, 31));
+}
+
+.fundoModoClaro{
+   /* background-image: linear-gradient(rgb(204, 208, 218),rgb(189, 189, 202));*/
+   background-color: rgb(240, 242, 255);
+}
+
+.divBtnLogin{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: end
+}
+.imgCarousel{
+    width: auto;
+    height: auto;
+    opacity: 75%;
+}
+
+.divCarousel{
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 55vw;
+}
+
+.carousel-item{
+    background-color: black;
+}
+
+
+.carousel-item:hover img{   
+    opacity: 55%;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.conteudoPrincipal{
+    margin: 0;
+}
+
+
+.imgNoticia{
+    width: 30%;
+}
+
+.txtSombra{
+    text-shadow: 1px 1px 3px black;
+}
+
+
+.itemNoticia{
+    display: flex;
+    flex-direction: row;
+}
+
+.itemNoticia:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 5px rgb(124, 124, 124);
+    -moz-transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    text-shadow: 1px 1px 2px rgb(201, 201, 201);
+    transition: 0.15s;
+}
+
+.textoNoticia{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10px;
+}
+
+.headingTxtNoticia{
+    color: brown;
+}
+
+.footerPagina{
+    background-color: rgb(104, 104, 104);
+    box-shadow: 0px -2px 3px rgb(80, 80, 80);
+}
+
+.txtFooter{
+    color: white;
+    text-decoration: none;
+}
+
+.txtFooter:hover{
+    color: black;
+}

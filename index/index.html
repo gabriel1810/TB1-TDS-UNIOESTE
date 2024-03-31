@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS e JS -->
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+
+
+</head>
+<body class="fundoModoClaro">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Noticias Gamer</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Análises</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Artigos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Fórum</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Plataformas
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">PC</a></li>
+                  <li><a class="dropdown-item" href="#">Playstation</a></li>
+                  <li><a class="dropdown-item" href="#">Xbox</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="col divBtnLogin">
+              <button class="btn btn-primary">
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="divCarousel">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner" >
+              <a class="carousel-item active" href="">
+                <img src="../imagens/dragonsdogma.jpg" class="d-block w-100 imgCarousel"> 
+                <div class="carousel-caption d-none d-md-block">
+                  <h3 class="txtSombra">JOGAMOS!</h3>
+                  <p class="txtSombra">REVIEW | Dragon's Dogma 2 derrapa na otimização desastrosa e na história previsível</p>
+                </div>
+              </a>
+
+            <a class="carousel-item" href="">
+              <img src="../imagens/gamesir-g8-galileo.jpeg" class="d-block w-100 imgCarousel"> 
+              <div class="carousel-caption d-none d-md-block">
+                <h4 class="txtSombra">QUASE PERFEITO</h4>
+                <p class="txtSombra">REVIEW | GameSir G8 Galileo é simplesmente o melhor controle mobile do mercado</p>
+              </div>
+            </a>
+
+            <a class="carousel-item" href="">
+              <img src="../imagens/rise-of-the-ronin.jpg" class="d-block w-100 imgCarousel">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 class="txtSombra">VALE A PENA?</h4>
+                <p class="txtSombra">REVIEW | Rise of the Ronin é desafiador e envolvente, mas destoa nos gráficos</p>
+              </div>
+
+            </a>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Proximo</span>
+          </button>
+        </div>
+      </div>
+
+
+
+      <div class="conteudoPrincipal row mt-5">
+
+        <div class="ms-3 noticias col-7">
+          <div class="itemNoticia">
+            <div class="imgNoticia">
+              <img src="../imagens/imgPlay.jpg" class="img-fluid">
+            </div>
+            <div class="textoNoticia col-8">
+              <div>
+                <h6 class="headingTxtNoticia">SUCESSO ABSOLUTO</h6>
+              </div>
+              <div>
+                <h5>PlayStation 2 vendeu 160 milhões de unidades, revelou Jim Ryan</h5>
+              </div>
+              <div class="divDataNoticia">
+                <h6>30/03/2024</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="itemNoticia mt-4">
+            <div class="imgNoticia">
+              <img src="../imagens/eddy-gordo-tekken.jpg" class="img-fluid">
+            </div>
+            <div class="textoNoticia col-8">
+              <div>
+                <h6 class="headingTxtNoticia">SÓ NA CAPOEIRA</h6>
+              </div>
+              <div>
+                <h5>Tekken 8: Eddy Gordo ganha novo trailer e data de lançamento</h5>
+              </div>
+              <div class="divDataNoticia">
+                <h6>29/03/2024</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="itemNoticia mt-4">
+            <div class="imgNoticia">
+              <img src="../imagens/age-of-empires-mobile.jpg" class="img-fluid">
+            </div>
+            <div class="textoNoticia col-8">
+              <div>
+                <h6 class="headingTxtNoticia">TESTES</h6>
+              </div>
+              <div>
+                <h5>Age of Empire Mobile recebe beta para Android</h5>
+              </div>
+              <div class="divDataNoticia">
+                <h6>28/03/2024</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="itemNoticia mt-4">
+            <div class="imgNoticia">
+              <img src="../imagens/Nova-saga-de-The-Witcher.jpg" class="img-fluid">
+            </div>
+            <div class="textoNoticia col-8">
+              <div>
+                <h6 class="headingTxtNoticia">VAI DEMORAR UM POUCO</h6>
+              </div>
+              <div>
+                <h5>Nova saga de The Witcher ainda está em pré-produção</h5>
+              </div>
+              <div class="divDataNoticia">
+                <h6>27/03/2024</h6>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+
+
+
+
+
+        <div class="anuncios col-4">
+
+        </div>
+
+
+      </div>
+     
+
+
+    
+      <div>
+        <footer class="py-3 my-4 footerPagina">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 txtFooter">Inicio</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 txtFooter">Análises</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 txtFooter">Artigos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 txtFooter">Fórum</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 txtFooter">FAQ</a></li>
+          </ul>
+          <p class="text-center txtFooter">Noticias Gamer © 2024 Todos os direitos reservados.</p>
+        </footer>
+      </div>
+</body>
+</html>

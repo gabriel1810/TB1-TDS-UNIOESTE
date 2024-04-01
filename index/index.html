@@ -14,12 +14,11 @@
 
     <!-- CSS e JS -->
     <link rel="stylesheet" href="./index.css">
-    <script src="./index.js"></script>
 
 
 </head>
 <body class="fundoModoClaro">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Noticias Gamer</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,15 +50,39 @@
               </li>
             </ul>
             <div class="col divBtnLogin">
-              <button class="btn btn-primary">
-                Login
+              <button class="btn btn-dark" id="btnLoginNavbar">
+                <i class="bi bi-person"></i>Login
               </button>
             </div>
           </div>
         </div>
       </nav>
 
-      <div class="divCarousel">
+
+      <div class="dropdown-menu " id="formularioLogin" data-bs-theme="dark">					
+        <div>
+            <div class="input-group mb-3 ps-2 pe-2">
+              <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
+              <input type="text" class="form-control" placeholder="Usuário">
+            </div>
+
+            <div class="input-group mb-3 ps-2 pe-2">
+              <span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
+              <input type="password" class="form-control" placeholder="Senha">
+            </div>
+
+            <div class="col">
+              <div class="row mb-1 w-75 centralizado">
+                <button class="btn btn-success">Login</button> 
+              </div>
+              <div class="mt-2 row w-75 centralizado">
+                <div class="linkNaoPossuiConta">Não possui conta?</div>  
+              </div>  
+            </div>
+        </div>
+      </div>
+
+      <div class="divCarousel centralizado">
         <div id="carouselExampleCaptions" class="carousel slide">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -107,104 +130,36 @@
 
       <div class="conteudoPrincipal row mt-5">
 
-        <div class="ms-3 noticias col-7">
-          <div class="itemNoticia">
-            <div class="imgNoticia">
-              <img src="../imagens/imgPlay.jpg" class="img-fluid">
-            </div>
-            <div class="textoNoticia col-8">
-              <div>
-                <h6 class="headingTxtNoticia">SUCESSO ABSOLUTO</h6>
-              </div>
-              <div>
-                <h5>PlayStation 2 vendeu 160 milhões de unidades, revelou Jim Ryan</h5>
-              </div>
-              <div class="divDataNoticia">
-                <h6>30/03/2024</h6>
-              </div>
-            </div>
-          </div>
+        <div class="ms-1 noticias col-8" id="colunaNoticiasIniciais"></div>
 
-          <div class="itemNoticia mt-4">
-            <div class="imgNoticia">
-              <img src="../imagens/eddy-gordo-tekken.jpg" class="img-fluid">
-            </div>
-            <div class="textoNoticia col-8">
-              <div>
-                <h6 class="headingTxtNoticia">SÓ NA CAPOEIRA</h6>
-              </div>
-              <div>
-                <h5>Tekken 8: Eddy Gordo ganha novo trailer e data de lançamento</h5>
-              </div>
-              <div class="divDataNoticia">
-                <h6>29/03/2024</h6>
-              </div>
-            </div>
+        <div class="col">
+          <div class="row anuncioUnico">
+            <img src="../imagens/anuncio1.png">
           </div>
-
-          <div class="itemNoticia mt-4">
-            <div class="imgNoticia">
-              <img src="../imagens/age-of-empires-mobile.jpg" class="img-fluid">
-            </div>
-            <div class="textoNoticia col-8">
-              <div>
-                <h6 class="headingTxtNoticia">TESTES</h6>
-              </div>
-              <div>
-                <h5>Age of Empire Mobile recebe beta para Android</h5>
-              </div>
-              <div class="divDataNoticia">
-                <h6>28/03/2024</h6>
-              </div>
-            </div>
+          <div class="row anuncioUnico">
+            <img src="../imagens/anuncio2.png">
           </div>
-
-          <div class="itemNoticia mt-4">
-            <div class="imgNoticia">
-              <img src="../imagens/Nova-saga-de-The-Witcher.jpg" class="img-fluid">
-            </div>
-            <div class="textoNoticia col-8">
-              <div>
-                <h6 class="headingTxtNoticia">VAI DEMORAR UM POUCO</h6>
-              </div>
-              <div>
-                <h5>Nova saga de The Witcher ainda está em pré-produção</h5>
-              </div>
-              <div class="divDataNoticia">
-                <h6>27/03/2024</h6>
-              </div>
-            </div>
+          <div class="row anuncioUnico">
+            <img src="../imagens/anuncio3.png">
           </div>
-
-          
         </div>
-
-
-
-
-
-
-        <div class="anuncios col-4">
-
-        </div>
-
 
       </div>
      
-
-
-    
-      <div>
+      <div class="mt-5">
         <footer class="py-3 my-4 footerPagina">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 txtFooter">Inicio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 txtFooter">Análises</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 txtFooter">Artigos</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 txtFooter">Fórum</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 txtFooter">FAQ</a></li>
+          <ul class="nav justify-content-center">  
+            <li class="nav-item"><p class="nav-link px-2 txtFooter">Inicio</p></li>
+            <li class="nav-item"><p class="nav-link px-2 txtFooter">Análises</p></li>
+            <li class="nav-item"><p class="nav-link px-2 txtFooter">Artigos</p></li>
+            <li class="nav-item"><p class="nav-link px-2 txtFooter">Fórum</p></li>
+            <li class="nav-item"><p class="nav-link px-2 txtFooter">FAQ</p></li>
           </ul>
           <p class="text-center txtFooter">Noticias Gamer © 2024 Todos os direitos reservados.</p>
         </footer>
       </div>
 </body>
+
+
+  <script src="./index.js"></script>
 </html>

@@ -1,18 +1,27 @@
 html{
-    height: 100%;
-}
-
-.textoModoClaro{
-    color: rgb(29, 29, 29);
-}
-
-.fundoModoEscuro{
-    background-image: linear-gradient(rgb(65, 69, 78),rgb(26, 26, 31));
+        height: 100%;
 }
 
 .fundoModoClaro{
    /* background-image: linear-gradient(rgb(204, 208, 218),rgb(189, 189, 202));*/
-   background-color: rgb(240, 242, 255);
+   /*background-color: rgb(240, 242, 255);*/
+   background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(rgb(193, 205, 218))) fixed;
+   
+}
+
+.navbar{
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
 }
 
 .divBtnLogin{
@@ -20,16 +29,16 @@ html{
     flex-direction: row; 
     justify-content: end
 }
+
 .imgCarousel{
-    width: auto;
+    width: auto;    
     height: auto;
     opacity: 75%;
 }
 
 .divCarousel{
+    z-index: 1;
     margin-top: 1%;
-    margin-left: auto;
-    margin-right: auto;
     max-width: 55vw;
 }
 
@@ -50,7 +59,6 @@ html{
     margin: 0;
 }
 
-
 .imgNoticia{
     width: 30%;
 }
@@ -68,11 +76,10 @@ html{
 .itemNoticia:hover{
     cursor: pointer;
     box-shadow: 1px 2px 5px rgb(124, 124, 124);
-    -moz-transform: scale(1.01);
-    -webkit-transform: scale(1.01);
     transform: scale(1.01);
     text-shadow: 1px 1px 2px rgb(201, 201, 201);
     transition: 0.15s;
+    background-color: #f5f5f548;
 }
 
 .textoNoticia{
@@ -87,15 +94,51 @@ html{
 }
 
 .footerPagina{
-    background-color: rgb(104, 104, 104);
-    box-shadow: 0px -2px 3px rgb(80, 80, 80);
+    background-color: rgb(70, 70, 70);
+    box-shadow: 0px -3px 3px rgb(170, 170, 170);
 }
 
 .txtFooter{
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .txtFooter:hover{
     color: black;
+}
+
+.anuncioUnico{
+    margin-left: auto;
+    position: sticky;
+    max-width: 25vw;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.centralizado{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.linkNaoPossuiConta{
+    text-align: center;
+    cursor: pointer;
+}
+
+.linkNaoPossuiConta:hover{
+    color: #c7c7c7;
+}
+
+
+#formularioLogin{
+   position: sticky;
+   left: 100%;
+   right: 0;
+   width: 20vw;
+   top: 60px;
+   z-index: 5; 
+   float: inline-end;
 }

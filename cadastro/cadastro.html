@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de usuário</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link href="../depen/bootstrap.min.css" rel="stylesheet" >
+    <script src="../depen/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./cadastro.css">
+    <link rel="stylesheet" href="../geral/styles.css">
+
+</head>
+
+<body class="fundoModoClaro" onload="carregaSelects()">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index/index.html">Noticias Gamer</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index/index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Análises</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Artigos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Fórum</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Plataformas
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">PC</a></li>
+                  <li><a class="dropdown-item">Playstation</a></li>
+                  <li><a class="dropdown-item">Xbox</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+     
+      <form class="formularioCadastro centralizado mt-5">
+
+        <div class="row mt-3 pb-2">
+            <h5>Dados básicos</h5>
+            <hr>
+            <div class="ms-2">
+                <div class="col-5 mb-3">
+                    <label class="form-label">Nome de usuário</label>
+                    <input type="text" class="form-control" id="nomeUsuario">
+                </div>
+        
+                <div class="row mb-3">
+                    <div class="col">
+                        <label class="form-label">Endereço de email</label>
+                        <input type="email" class="form-control" id="emailUsuario" placeholder="Seu endereço de email">
+                    </div>
+                    <div class="col">
+                        <label class="form-label">Confirmar endereço de email</label>
+                        <input type="email" class="form-control" id="confirmaEmailUsuario" placeholder="Seu endereço de email">
+                    </div>
+                </div>
+        
+        
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="senhaUsuario" class="form-label">Senha</label>
+                        <input type="password" id="senhaUsuario" class="form-control" placeholder="Sua senha">
+                        <div id="passwordHelpBlock" class="form-text">
+                        Sua senha deve ter de 8 a 20 caracteres, conter letras e números.
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="confirmaSenhaUsuario" class="form-label">Confirmar senha</label>
+                        <input type="password" id="confirmaSenhaUsuario" class="form-control" placeholder="Confirme sua senha">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5">
+            <h5>Dados pessoais</h5>
+            <hr>
+            <div class="ms-2">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nomePessoa" placeholder="Seu nome">
+                    </div>
+                    <div class="col">
+                        <label class="form-label">Sobrenome</label>
+                        <input type="text" class="form-control" id="sobrenomePessoa" placeholder="Seu sobrenome">
+                    </div>
+                </div>
+        
+               <div class="row mb-3">
+                    <div class="col-sm-5">
+                        <label class="form-label">Data de nascimento</label>
+                        <input type="date" class="form-control" id="dataNascimento">
+                    </div>
+        
+                    <div class="col-sm-6" style="margin-left: auto;">
+                            <label for="formFile" class="form-label">Foto de usuário</label>
+                            <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+
+
+                <div class="row mt-5">
+                    <h6>Endereço</h6>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-4">
+                        <label class="form-label">CEP (somente números)</label>
+                        <input type="text" class="form-control" id="cep" placeholder="Seu CEP">
+
+                    </div>
+                    <div class="col" style="align-self: flex-end;">
+                        <button class="btn btn-primary" id="btnPesquisarCEP" type="button"> <i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <label class="form-label">Estado</label>
+                        <select class="form-select" id="selectEstado" >
+                            <option selected></option>
+                          </select>
+                    </div>
+        
+                    <div class="col-sm-6">
+                        <label class="form-label">Cidade</label>
+                        <select class="form-select" id="selectCidade">
+                            <option selected></option>
+                          </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-8">
+                        <label class="form-label">Endereço</label>
+                        <input type="text" class="form-control" id="logradouroEndereço" placeholder="Seu endereço">
+                    </div>
+        
+                    <div class="col-sm-3">
+                        <label class="form-label">Numero</label>
+                        <input type="text" class="form-control" id="nomePessoa" placeholder="Nº da residência">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+      </form>
+
+     
+      <div class="mt-5">
+        <footer class="py-3 my-4 footerPagina">
+          <ul class="nav justify-content-center">  
+            <li class="nav-item"><p class="nav-link px-2 txtFooter">Inicio</p></li>
+            <li class="nav-item"><p class="nav-link px-2 txtFooter">Análises</p></li>
+            <li class="nav-item"><p class="nav-link px-2 txtFooter">Artigos</p></li>
+            <li class="nav-item"><p class="nav-link px-2 txtFooter">Fórum</p></li>
+            <li class="nav-item"><p class="nav-link px-2 txtFooter">FAQ</p></li>
+          </ul>
+          <p class="text-center txtFooter">Noticias Gamer © 2024 Todos os direitos reservados.</p>
+        </footer>
+      </div>
+</body>
+
+
+  <script src="./cadastro.js"></script>
+</html>

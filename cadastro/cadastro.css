@@ -1,0 +1,10 @@
+.formularioCadastro{
+    width: 60%;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    box-shadow: 1px 1px 3px rgb(156, 156, 156);
+}

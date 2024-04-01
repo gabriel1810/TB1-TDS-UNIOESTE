@@ -1,0 +1,36 @@
+html{
+    height: 100%;
+}
+
+.fundoModoClaro{
+    /* background-image: linear-gradient(rgb(204, 208, 218),rgb(189, 189, 202));*/
+    /*background-color: rgb(240, 242, 255);*/
+    background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(rgb(193, 205, 218))) fixed;
+    
+ }
+
+.navbar{
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+
+.footerPagina{
+    background-color: rgb(70, 70, 70);
+    box-shadow: 0px -3px 3px rgb(170, 170, 170);
+}
+
+.txtFooter{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.txtFooter:hover{
+    color: black;
+}
+
+.centralizado{
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -43,7 +43,7 @@ btnLoginNav.addEventListener("click", function(){
 
 const linkCriarConta = document.querySelector(".linkNaoPossuiConta");
 linkCriarConta.addEventListener("click", function(){
-    window.location.href = "../login/login.html"
+    window.location.href = "../cadastro/cadastro.html"
 })
 
 

@@ -28,7 +28,8 @@ async function carregaSelectEstados(){
 // para adicionar as cidades do estado escolhido no select das cidades
 selectEstado.addEventListener("change", function(){
     const estadoSelecionado = selectEstado.value;
-    mudaCidadesDoSelect(estadoSelecionado);
+    if(estadoSelecionado != "")
+        mudaCidadesDoSelect(estadoSelecionado);
 })
 
 // Chama a rotina de pesquisa de cep ao clicar no botão btnPesquisaCEP
@@ -143,6 +144,8 @@ function validaCampos(){
     const nomePessoa = document.querySelector("#nomePessoa")
     const sobrenomePessoa = document.querySelector("#sobrenomePessoa")
     const dataNascimento = document.querySelector("#dataNascimento")
+    const checkboxTermos = document.querySelector("#aceiteTermos")
+    
     let msg = ""
 
     if(!nomeUsuario.value || nomeUsuario.value.length < 2){
@@ -172,6 +175,9 @@ function validaCampos(){
     if(!dataNascimento.value){
         msg += "A data de nascimento é obrigatória\n"
     }
+    if(!checkboxTermos.checked){
+        msg += "Você deve aceitar os termos de uso"
+    }
 
     if(msg.length > 0){
         alert(msg)
@@ -185,6 +191,7 @@ function validaCampos(){
             dataNascimento: dataNascimento.value
         }
         alert(JSON.stringify(pessoa));
+        document.getElementById('formulario').submit();
     }
 
 }

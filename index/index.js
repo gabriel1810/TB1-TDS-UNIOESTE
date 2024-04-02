@@ -53,19 +53,17 @@ async function carregaListaNoticiasIniciais(id){
     for(let i = 0; i < noticias.length; i++){
         let noticia = noticias[i];
         let divItemNoticia = `
-        <div class="itemNoticia mt-4">
-        <div class="imgNoticia">
-          <img src="${noticia.img}" class="img-fluid">
-        </div>
-        <div class="textoNoticia col-8">
-          <div>
-            <h6 class="headingTxtNoticia">${noticia.header}</h6>
+        <div class="card mb-5 itemNoticia">
+        <div class="row g-0" style="width: 100%;">
+          <div class="col-md-3">
+            <img src="${noticia.img}" class="img-fluid rounded-start">
           </div>
-          <div>
-            <h5 class="tituloNoticia">${noticia.titulo}</h5>
-          </div>
-          <div class="divDataNoticia">
-            <h6>${noticia.data}</h6>
+          <div class="col-md-8">
+            <div class="card-body" >
+              <h5 class="card-title headingTxtNoticia">${noticia.header}</h5>
+              <h4 class="tituloNoticia">${noticia.titulo}</h4>
+              <p class="card-text"><small class="text-body-secondary">${noticia.data}</small></p>
+            </div>
           </div>
         </div>
       </div>

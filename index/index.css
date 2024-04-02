@@ -1,15 +1,12 @@
-.hidden {
-    display: none;
-}
-
-.visible {
-    display: block;
-}
-
 .divBtnLogin{
     display: flex; 
     flex-direction: row; 
     justify-content: end
+}
+
+
+.escondido{
+    display: none;
 }
 
 .imgCarousel{
@@ -53,6 +50,8 @@
 .itemNoticia{
     display: flex;
     flex-direction: row;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.274);
 }
 
 .itemNoticia:hover{

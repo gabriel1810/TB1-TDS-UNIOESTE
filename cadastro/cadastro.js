@@ -37,7 +37,12 @@ btnPesquisaCEP.addEventListener("click", rotinaPesquisaCEP)
 
 // Monitora todo o texto digitado no campo campoCEP, caso seja 13 (enter), chama
 // a pesquisa de CEP
-campoCEP.addEventListener("keyup", (e) => {e.keyCode == 13?rotinaPesquisaCEP():undefined})
+campoCEP.addEventListener("keydown", (e) => {
+    if(e.keyCode == 13 ){
+        e.preventDefault();
+        rotinaPesquisaCEP()
+    }
+})
 
 
 // Rotina de atualizar as informações de endereço do formulario baseado no CEP
@@ -45,7 +50,8 @@ campoCEP.addEventListener("keyup", (e) => {e.keyCode == 13?rotinaPesquisaCEP():u
 // as informacoes sobre aquele cep, apos isso, muda os campos a partir dos dados retornados
 async function rotinaPesquisaCEP(){
     const cep = document.querySelector("#cep").value;
-
+    if(cep.length != 8)     
+        return
     // Nessa caso nao precisa de "await", pois ja estamos falando .then(), isso
     // faz com que o codigo dentro dos parenteses seja executado somente apos o termino
     // da chamada

@@ -4,7 +4,6 @@
     justify-content: end
 }
 
-
 .escondido{
     display: none;
 }
@@ -18,13 +17,12 @@
 .divCarousel{
     z-index: 1;
     margin-top: 1%;
-    max-width: 55vw;
+    max-width: 65rem;
 }
 
 .carousel-item{
     background-color: black;
 }
-
 
 .carousel-item:hover img{   
     opacity: 55%;
@@ -76,8 +74,8 @@
 
 .anuncioUnico{
     margin-left: auto;
-    position: sticky;
-    max-width: 25vw;
+    min-width: 200px;
+    max-width: 400px;
     margin-top: 20px;
     margin-bottom: 40px;
     cursor: pointer;
@@ -93,11 +91,50 @@
 }
 
 #formularioLogin{
-   position: sticky;
-   left: 100%;
+   position: fixed;
+   left: auto;
    right: 0;
    width: 20vw;
-   top: 60px;
+   top: auto;
    z-index: 5; 
    float: inline-end;
+}
+
+.divImgWhatsapp{
+    width: 150px;
+}
+
+.infoWhatsapp{
+    position: fixed;
+    flex-direction: row;
+    width: 250px;
+    height: 5.7em;
+    align-items: end;
+    color: white;
+    font-size: 1.1em;
+    background-color: rgba(0, 0, 0, 0.623);
+    border-radius: 5px;
+    z-index: 10;
+    float: inline-end;
+    left: auto;
+    right: 0;
+    bottom: 20%;
+}
+
+.dflex{
+    display: flex;
+}
+
+.divFecharWhatsapp{
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.divImgWhatsapp{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

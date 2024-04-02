@@ -71,3 +71,12 @@ async function carregaListaNoticiasIniciais(id){
         document.getElementById(id).innerHTML += divItemNoticia
     }
 }
+
+
+
+btnFechaWhatsapp = document.querySelector("#btnFechaWhatsapp");
+btnFechaWhatsapp.addEventListener("click",() => {
+    let div = document.querySelector(".infoWhatsapp")
+    div.classList.remove("dflex")
+    div.classList.add("escondido")
+})

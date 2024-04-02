@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="fundoModoClaro" onload="carregaSelects()">
+<body class="fundoModoClaro" onload="carregaSelectEstados()">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index/index.html">Noticias Gamer</a>
@@ -65,35 +65,36 @@
         <div class="row mt-3 pb-2">
             <h5>Dados básicos</h5>
             <hr>
+            <p class="text-danger"><strong>Campos marcados com * são obrigatórios.</strong></p>
             <div class="ms-2">
                 <div class="col-5 mb-3">
-                    <label class="form-label">Nome de usuário</label>
-                    <input type="text" class="form-control" id="nomeUsuario">
+                    <label class="form-label">Nome de usuário *</label>
+                    <input type="text" class="form-control" id="nomeUsuario" required>
                 </div>
         
                 <div class="row mb-3">
                     <div class="col">
-                        <label class="form-label">Endereço de email</label>
-                        <input type="email" class="form-control" id="emailUsuario" placeholder="Seu endereço de email">
+                        <label class="form-label">Endereço de email *</label>
+                        <input type="email" class="form-control" id="emailUsuario" placeholder="Seu endereço de email" required>
                     </div>
                     <div class="col">
-                        <label class="form-label">Confirmar endereço de email</label>
-                        <input type="email" class="form-control" id="confirmaEmailUsuario" placeholder="Seu endereço de email">
+                        <label class="form-label">Confirmar endereço de email *</label>
+                        <input type="email" class="form-control" id="confirmaEmailUsuario" placeholder="Seu endereço de email" required>
                     </div>
                 </div>
         
         
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="senhaUsuario" class="form-label">Senha</label>
-                        <input type="password" id="senhaUsuario" class="form-control" placeholder="Sua senha">
+                        <label for="senhaUsuario" class="form-label">Senha *</label>
+                        <input type="password" id="senhaUsuario" class="form-control" placeholder="Sua senha" required>
                         <div id="passwordHelpBlock" class="form-text">
-                        Sua senha deve ter de 8 a 20 caracteres, conter letras e números.
+                        Sua senha deve ter de 8 a 20 caracteres.
                         </div>
                     </div>
                     <div class="col">
-                        <label for="confirmaSenhaUsuario" class="form-label">Confirmar senha</label>
-                        <input type="password" id="confirmaSenhaUsuario" class="form-control" placeholder="Confirme sua senha">
+                        <label for="confirmaSenhaUsuario" class="form-label">Confirmar senha *</label>
+                        <input type="password" id="confirmaSenhaUsuario" class="form-control" placeholder="Confirme sua senha" required>
                     </div>
                 </div>
             </div>
@@ -107,19 +108,19 @@
             <div class="ms-2">
                 <div class="row mb-3">
                     <div class="col">
-                        <label class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="nomePessoa" placeholder="Seu nome">
+                        <label class="form-label">Nome *</label>
+                        <input type="text" class="form-control" id="nomePessoa" placeholder="Seu nome" required>
                     </div>
                     <div class="col">
-                        <label class="form-label">Sobrenome</label>
-                        <input type="text" class="form-control" id="sobrenomePessoa" placeholder="Seu sobrenome">
+                        <label class="form-label">Sobrenome *</label>
+                        <input type="text" class="form-control" id="sobrenomePessoa" placeholder="Seu sobrenome" required>
                     </div>
                 </div>
         
                <div class="row mb-3">
                     <div class="col-sm-5">
-                        <label class="form-label">Data de nascimento</label>
-                        <input type="date" class="form-control" id="dataNascimento">
+                        <label class="form-label">Data de nascimento *</label>
+                        <input type="date" class="form-control" id="dataNascimento" required>
                     </div>
         
                     <div class="col-sm-6" style="margin-left: auto;">
@@ -168,12 +169,17 @@
         
                     <div class="col-sm-3">
                         <label class="form-label">Numero</label>
-                        <input type="text" class="form-control" id="nomePessoa" placeholder="Nº da residência">
+                        <input type="text" class="form-control" id="numResidencia" placeholder="Nº da residência">
                     </div>
                 </div>
             </div>
 
 
+        </div>
+
+
+        <div class="row mt-5 centralizado" style="width: 50%;">
+          <button class="btn btn-success" type="submit" id="btnEnviarForm"><i class="bi bi-check-circle"></i> Confirmar</button>
         </div>
 
       </form>

@@ -8,3 +8,8 @@
     padding-bottom: 2%;
     box-shadow: 1px 1px 3px rgb(156, 156, 156);
 }
+
+
+.invalido{
+    border: 2px solid rgb(247, 79, 79);
+}

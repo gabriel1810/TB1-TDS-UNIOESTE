@@ -5,6 +5,7 @@ const selectEstado = document.querySelector("#selectEstado");
 const selectCidade = document.querySelector("#selectCidade");
 const btnPesquisaCEP = document.querySelector("#btnPesquisarCEP");
 const campoCEP = document.querySelector("#cep");
+const inputElement = document.getElementById("formFile");
 
 // Carrega o select de estados com os dados proveninetes de getAllEstados()
 async function carregaSelectEstados(){
@@ -133,12 +134,23 @@ async function getCidadesDoEstado(geonameId){
     return cidades;
 }
 
-
 document.getElementById("btnEnviarForm").addEventListener("click", function(event){
     event.preventDefault()
     validaCampos()
-  });
+});
 
+
+inputElement.addEventListener("change", function(event){
+    const file = event.target.files[0];
+    if(file){
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const imageSrc = e.target.result;
+          document.getElementById("fotoDoUsuario").src = imageSrc;
+        };
+        reader.readAsDataURL(file);
+    }
+});
 
 
 function validaCampos(){
